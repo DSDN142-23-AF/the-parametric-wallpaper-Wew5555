@@ -7,8 +7,9 @@ let earRightX = 155 //right ear back&front out&top is X
 let earInY = 40 //the back one
 let earIn2Y = 45 //the front one
 //eye
-let eyeScale = (30, 30)
-let eyeScaleIn = (25, 25) //the inside eyes
+let cuteEyes = true//if statement or condition. No.
+let eyeScale = 30
+let eyeScaleIn = 25 //the inside eyes
 let eyeMoveY = 70 //move both eyes
 //nose
 let noseTopY = 83 //move the top straight part
@@ -31,19 +32,18 @@ let lineDownY = 50
 //colors
 let white = 255
 let black = 0
-//let pink = color(255,192,203);//No. 53
-//let yellow = color(255,193,0);//No. 54
-
+//let pink = color(255,192,203);//No. 54
+//let yellow = color(255,193,0);//No. 55
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 300;
   pWallpaper.grid_settings.cell_height = 300;
-  pWallpaper.grid_settings.row_offset = 60;
+  pWallpaper.grid_settings.row_offset = 150;
 }
 
 function wallpaper_background() {
@@ -67,16 +67,30 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   stroke(black);
   fill(black);
   ellipse(100, 85, 125, 110);
+
   //Eyes
-  fill(yellow);
-  stroke(yellow);
-  ellipse(78, eyeMoveY, eyeScale); //left
-  fill(black);
-  ellipse(79, eyeMoveY, eyeScaleIn); //inside eye
-  fill(yellow);
-  ellipse(125, eyeMoveY, eyeScale); //right
-  fill(black);
-  ellipse(124, eyeMoveY, eyeScaleIn); //inside eye
+  if (cuteEyes) {
+    fill(yellow);
+    stroke(yellow);
+    ellipse(78, eyeMoveY, eyeScale); //left
+    fill(black);
+    ellipse(79, eyeMoveY, eyeScaleIn); //inside eye
+    fill(yellow);
+    ellipse(125, eyeMoveY, eyeScale); //right
+    fill(black);
+    ellipse(124, eyeMoveY, eyeScaleIn); //inside eye
+  } else {
+    fill(yellow);
+    stroke(yellow);
+    ellipse(79, eyeMoveY, eyeScale); //left
+    fill(black);
+    ellipse(79, eyeMoveY, 10, 25); //inside eye
+    fill(yellow);
+    ellipse(125, eyeMoveY, eyeScale); //right
+    fill(black);
+    ellipse(124, eyeMoveY, 10, 25); //inside eye
+  }
+
   //Nose
   fill(pink);
   strokeWeight(0.5);
