@@ -7,6 +7,7 @@ let earRightX = 155 //right ear back&front out&top is X
 let earInY = 40 //the back one
 let earIn2Y = 45 //the front one
 //eye
+let eyesOpen = true //if statement or condition
 let eyeScale = 30
 let eyeScaleIn = 25 //the inside eyes
 let eyeMoveY = 70 //move both eyes
@@ -71,15 +72,23 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(cream);
   ellipse(100, 85, 125, 110);
   //Eyes
-  fill(green);
-  stroke(green);
-  ellipse(78, eyeMoveY, eyeScale); //left
-  fill(black);
-  ellipse(79, eyeMoveY, eyeScaleIn); //inside eye
-  fill(green);
-  ellipse(125, eyeMoveY, eyeScale); //right
-  fill(black);
-  ellipse(124, eyeMoveY, eyeScaleIn); //inside eye
+  if (eyesOpen) {
+    fill(green);
+    stroke(green);
+    ellipse(78, eyeMoveY, eyeScale); //left
+    fill(black);
+    ellipse(79, eyeMoveY, eyeScaleIn); //inside eye
+    fill(green);
+    ellipse(125, eyeMoveY, eyeScale); //right
+    fill(black);
+    ellipse(124, eyeMoveY, eyeScaleIn); //inside eye
+  } else {
+    //sleep eyes
+    strokeWeight(1.5);
+    stroke(black);
+    line(60, 75, 85, 75); //left
+    line(115, 75, 140, 75); //right}
+  }
   //Nose
   fill(pink);
   strokeWeight(0.5);
