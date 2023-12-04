@@ -1,4 +1,4 @@
-//this is white cat
+//this is white cat with cloud
 //ear
 let earTopY = 10 //the pointy ear
 let earOutY = 60
