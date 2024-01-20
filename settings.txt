@@ -1,22 +1,47 @@
 You will need to fill out this file for hand in. 
-
 The bellow is just an example, feel free to disregard this documents contents.
-
-
 Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
 
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+//this is black cat
+//ear
+let earTopY = 10 //the pointy ear
+let earOutY = 60 //all 
+let earLeftX = 45 //left ear back&front out&top is X
+let earRightX = 155 //right ear back&front out&top is X
+let earInY = 40 //the back one
+let earIn2Y = 45 //the front one
+//eye
+let cuteEyes = true//if statement or condition. No.
+let eyeScale = 30
+let eyeScaleIn = 25 //the inside eyes
+let eyeMoveY = 70 //move both eyes
+//nose
+let noseTopY = 83 //move the top straight part
+//whiskers
+let lineInleftX = 55 //'In' mean inside the face
+let lineInRightX = 145
+let lineIn1Y = 80 //both L&R
+let lineIn2Y = 90 //both L&R
+let lineIn3Y = 100 //both L&R
+let lineOutleftX = 15 //'Out' mean outside the face
+let lineOutRightX = 185
+let lineOut1Y = 60 //both L&R
+let lineOut3Y = 120 //both L&R
+//mouth
+let mouthDownY = 110
+let mouthTopY = 102
+let mouthTopX = 102
+//line on body
+let lineDownY = 50
+//colors
+let white = 255
+let black = 0
+//let pink = color(255,192,203);//No. 54
+//let yellow = color(255,193,0);//No. 55
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -24,31 +49,62 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width = 300;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset = 150;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+//this is white cat
+//ear
+let earTopY = 10 //the pointy ear
+let earOutY = 60
+let earLeftX = 45 //left ear back&front out&top is X
+let earRightX = 155 //right ear back&front out&top is X
+let earInY = 40 //the back one
+let earIn2Y = 45 //the front one
+//eye
+let eyesOpen = true //if statement or condition/No. 76
+let eyeScale = 30
+let eyeScaleIn = 25
+let eyeMoveY = 70 //move both eyes
+//nose
+let noseTopY = 83 //move the top straight part
+//whiskers
+let lineInleftX = 55 //'In' mean inside the face
+let lineInRightX = 145
+let lineIn1Y = 80 //both L&R
+let lineIn2Y = 90 //both L&R
+let lineIn3Y = 100 //both L&R
+let lineOutleftX = 15 //'Out' mean outside the face
+let lineOutRightX = 185
+let lineOut1Y = 60 //both L&R
+let lineOut3Y = 120 //both L&R
+//mouth
+let mouthDownY = 110
+let mouthTopY = 102
+let mouthTopX = 102
+//colors
+let white = 255
+let black = 0
+//let pink = color(255,192,203);//No. 55
+//let skyBlue = color(135,206,250);//No. 56
+//let yellow = color(255,200,21);//No. 57
+//let leftEyes = skyBlue//No. 60
+//let rightEyes = yellow//No. 61
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+    pWallpaper.output_mode(GRID_WALLPAPER);
+    pWallpaper.resolution(NINE_LANDSCAPE);
+    pWallpaper.show_guide(false); //set this to false when you're ready to print
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+    //Grid settings
+    pWallpaper.grid_settings.cell_width = 250;
+    pWallpaper.grid_settings.cell_height = 250;
+    pWallpaper.grid_settings.row_offset = 100;
 }
+
+/////////////////////////////////
